@@ -1,0 +1,58 @@
+**Launch a docker image using dockerfile :   
+    docker build -t image-name .
+
+**Run a docker container :
+    docker run -d --name container-name image-name
+
+**Access the Docker container :
+    docker exec -it container-name bash
+
+**Expose container ports :
+    docker run -d -p host-port:container-port --name container-name image-name
+
+**Stop container :
+    docker stop my-container
+
+**Delete container :
+    docker rm my-container
+
+**Delete image :
+    docker rmi my-image
+
+**List of running images/containers :
+    docker images
+    docker ps -a
+
+*** General docker commands :
+    - docker ps or docker ps -a : 
+        show the names of all the containers you have + the id you need and the port associated.
+    - docker pull "NameOfTheImage" : 
+        pull an image from dockerhub
+    - docker "Three first letter of your docker" : 
+        show the logs of your last run of dockers
+    - docker stop $(docker ps -aq) - docker rm $(docker ps -a -q) -  docker rmi $(docker images -aq) : 
+        combo to stop and delete all images / containers
+    - docker exec -it "Three first letter of your docker" sh :
+        to execute the program with the shell
+
+*** Docker run :
+    - docker run "name of the docker image" : 
+        to run the docker image
+    - docker run -d :
+        run container in background
+    - docker run -p :
+        publish a container's port to the host
+    - docker run -P : 
+        publish all exposed port to random ports
+    - docker run -it "imageName" : 
+        le programme continuera de fonctionner et on pourra interagir avec le container
+    - docker run -name sl mysql : 
+        give a name for the container instead an ID
+    - docker run -d -p 7000:80 test:latest
+        run a host port to the exposed port
+
+*** Docker image :
+    - docker image rm -f "image name/id" : 
+        delete the image, if the image is running you need to kill it first.
+    - docker image kill "name" : 
+        stop a running image,
