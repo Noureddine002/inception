@@ -12,12 +12,12 @@ sleep 10
     --dbpass=$DB_UPASSWORD  \
     --path=/var/www/html/ --allow-root
 
-./wp-cli.phar core install              \
-    --url=$URL                          \
-    --title=$TITLE                      \
-    --admin_user=$ADMIN                 \
-    --admin_password=$SQL_ROOT_PASSWORD \
-    --admin_email=$EMAIL                \
+./wp-cli.phar core install               \
+    --url=$URL                           \
+    --title=$TITLE                       \
+    --admin_user=$ADMIN                  \
+    --admin_password=$SQL_ROOT_PASSWORD  \
+    --admin_email=$EMAIL2                \
     --path=/var/www/html/ --allow-root
 
 ./wp-cli.phar user create $DB_USER $EMAIL   \
