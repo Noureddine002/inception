@@ -15,7 +15,7 @@ sleep 10
 ./wp-cli.phar core install              \
     --url=$URL                          \
     --title=$TITLE                      \
-    --admin=$ADMIN                      \
+    --admin_user=$ADMIN                 \
     --admin_password=$SQL_ROOT_PASSWORD \
     --admin_email=$EMAIL                \
     --path=/var/www/html/ --allow-root

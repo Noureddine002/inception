@@ -14,7 +14,6 @@ RUN openssl req -x509 -nodes -newkey rsa:4096 \
     -keyout /etc/nginx/ssl/ntanjaou.key \
     -subj "/C=MA/L=KHOURIBGA/O=1337/CN=ntanjaou"
 
-
 COPY ./conf/nginx.conf /etc/nginx/conf.d
 
 COPY index.html /var/www/html
